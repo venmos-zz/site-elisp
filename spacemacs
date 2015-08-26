@@ -19,7 +19,6 @@
      ;; ----------------------------------------------------------------
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      github
-     osx
      auto-completion
      emacs-lisp
      markdown
@@ -173,8 +172,8 @@ layers configuration."
   (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
   ;; key-binding
-  (setq mac-option-modifier 'hyper)
-  (setq mac-command-modifier 'meta)
+;;  (setq mac-option-modifier 'hyper)
+;;  (setq mac-command-modifier 'meta)
   ;; helm-ls-git
   (global-set-key (kbd "H-p") 'helm-browse-project)
   ;; load-path
