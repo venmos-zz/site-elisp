@@ -30,7 +30,6 @@
      javascript
      ruby
      irc
-     gnus
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -195,7 +194,7 @@ layers configuration."
   (require 'init-elfeed)
   (require 'init-eww)
   (require 'init-simplenote2)
-)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
