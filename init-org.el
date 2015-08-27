@@ -18,7 +18,7 @@
          "* TODO %?\n%U\n%a\n")
 				("S" "ShiTong" entry (file+headline ,"~/.org/todo.org" "ShiTong")
          "* TODO %?\n%U\n%a\n")
-        ("n" "Note" entry (file+headline ,"~/.org/note.org" "Note")
+        ("n" "Note" entry (file+headline ,"~/.org/note.org" "Inbox")
          "* Note %?\n%U\n")))
 
 (require 'org-crypt)
