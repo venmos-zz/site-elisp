@@ -40,7 +40,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(twittering-mode dired-efap mpv dired+ dired-single dired-rainbow color-moccur elfeed mwe-log-commands tramp-term vagrant helm-ls-git)
+   dotspacemacs-additional-packages '(twittering-mode dired-efap mpv dired+ dired-single dired-rainbow color-moccur elfeed mwe-log-commands tramp-term vagrant helm-ls-git org-page)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -69,7 +69,7 @@ before layers configuration."
    dotspacemacs-startup-banner 'official
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
-   dotspacemacs-startup-lists '(recents projects)
+   dotspacemacs-startup-lists '(recents projects bookmarks)
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -172,7 +172,7 @@ layers configuration."
   (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
   ;; key-binding
-;;  (setq mac-option-modifier 'hyper)
+  (setq mac-option-modifier 'hyper)
 ;;  (setq mac-command-modifier 'meta)
   ;; helm-ls-git
   (global-set-key (kbd "H-p") 'helm-browse-project)
