@@ -26,6 +26,7 @@
      chinese
      git
      html
+     php
      javascript
      ruby
      irc
@@ -40,7 +41,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(twittering-mode dired-efap mpv dired+ dired-single dired-rainbow color-moccur elfeed mwe-log-commands tramp-term vagrant helm-ls-git org-page)
+   dotspacemacs-additional-packages '(twittering-mode dired-efap mpv dired+ dired-single dired-rainbow color-moccur elfeed mwe-log-commands tramp-term vagrant helm-ls-git org-page helm-github-stars simplenote2)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -171,6 +172,8 @@ layers configuration."
   (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+  ;; github-start
+  (setq helm-github-stars-username "venmos")
   ;; key-binding
   (setq mac-option-modifier 'hyper)
 ;;  (setq mac-command-modifier 'meta)
@@ -179,7 +182,7 @@ layers configuration."
   ;; load-path
   (add-to-list 'load-path "~/.site-elisp/")
   ;; require site-elisp
-  (require 'init-dired)
+;;  (require 'init-dired)
   (require 'init-yas)
   (require 'init-gnus)
   (require 'init-erc)
@@ -191,6 +194,7 @@ layers configuration."
   (require 'init-org)
   (require 'init-elfeed)
   (require 'init-eww)
+  (require 'init-simplenote2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
