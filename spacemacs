@@ -38,7 +38,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(mew mpv elfeed twittering-mode org-page simplenote2)
+   dotspacemacs-additional-packages '(mew mpv elfeed twittering-mode org-page simplenote2 hexrgb)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -73,13 +73,15 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light
+   dotspacemacs-themes '(
                          solarized-light
+                         spacemacs-dark
+                         spacemacs-light
                          solarized-dark
                          leuven
                          monokai
-                         zenburn)
+                         zenburn
+                         )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -173,6 +175,17 @@ before layers configuration."
   (require 'init-org)
   (require 'init-simplenote2)
   (require 'init-weibo)
+
+  ;; display time
+  (display-time-mode t)
+
+  ;; chinese layer
+  (setq-default dotspacemacs-configuration-layers '((chinese :variables
+                                                             chinese-enable-youdao-dict t
+                                                             chinese-default-input-method 'pinyin)))
+
+                                                             (setq pyim-dicts
+                                                                   '((:name "dict1" :file "~/.site-elisp/plugin/pyim-bigdict.pyim" :coding utf-8-unix)))
 
   ;; eww
   (require 'eww)
