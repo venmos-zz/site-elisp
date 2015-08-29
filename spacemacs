@@ -187,11 +187,6 @@ before layers configuration."
                                                              (setq pyim-dicts
                                                                    '((:name "dict1" :file "~/.site-elisp/plugin/pyim-bigdict.pyim" :coding utf-8-unix)))
 
-  ;; eww
-  (require 'eww)
-  (define-key eww-link-keymap "o" 'ace-link-eww)
-  (define-key eww-mode-map "o" 'ace-link-eww)
-
   ;; osx switch key
   (setq mac-option-modifier 'hyper)
  ;;(setq mac-command-modifier 'meta)
