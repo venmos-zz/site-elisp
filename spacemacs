@@ -27,8 +27,8 @@
      org
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+            shell-default-shell 'ansi-term
+            shell-default-term-shell "/usr/local/bin/zsh")
      spell-checking
      syntax-checking
      version-control
@@ -221,7 +221,6 @@ before layers configuration."
       (mpv-play (expand-file-name (dired-file-name-at-point)))))
 
   ;; elfeed
-
   ;; rss
   (require 'elfeed)
 
@@ -247,7 +246,6 @@ before layers configuration."
   (require 'yasnippet)
 
   (yas/load-directory "~/.site-elisp/plugin/yasnippets")
-  (setq yas-snippets-dir (expand-file-name "~/.site-elisp/plugin/yasnippets"))
 
   ;;; erc
   (defun erc-freenode ()
@@ -279,7 +277,6 @@ before layers configuration."
   (setq pgg-cache-passphrase nil)
 
   ;; twittering-mode
-
   ;; use-gnupg
   (setq twittering-use-master-password t)
   ;; icons-config
