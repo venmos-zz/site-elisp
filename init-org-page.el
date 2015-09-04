@@ -5,7 +5,7 @@
 
 (require 'org-page)
 
-(setq op/repository-directory "~/Github/venmos.github.io")
+(setq op/repository-directory "~/Dropbox/Org/venmos.github.io")
 (setq op/site-domain "http://venmos.com/")
 
 (setq op/personal-disqus-shortname "venomblog")
@@ -16,7 +16,7 @@
 (setq op/site-sub-title "A website framework for hackers.")
 
 (setq op/repository-org-branch "source")
-(setq op/repository-html-branch "master")
+(setq op/repository-html-branch "gitcafe-pages")
 
 (setq op/personal-github-link "https://github.com/venmos")
 

@@ -3,23 +3,26 @@
 ;; http://venmos.com
 ;; venmos@fuck.gfw.es
 
-(setq org-directory "~/.org/")
-(setq org-agenda-files (list "~/.org/todo.org"))
-(setq org-default-notes-file "~/.org/note.org")
+(setq org-directory "~/Dropbox/Org/")
+(setq org-agenda-files (list "~/Dropbox/Org/todo.org"))
+(setq org-default-notes-file "~/Dropbox/Org/note.org")
 
 (setq org-capture-templates
-      `(("i" "Inbox" entry (file+headline ,"~/.org/todo.org" "Inbox")
-         "* TODO %?\n%U\n%a\n")
-        ("e" "Emacs" entry (file+headline ,"~/.org/todo.org" "Emacs")
-         "* TODO %?\n%U\n%a\n")
-				("w" "Wiki" entry (file+headline ,"~/.org/todo.org" "Wiki")
-         "* TODO %?\n%U\n%a\n")
-        ("s" "Study" entry (file+headline ,"~/.org/todo.org" "Study")
-         "* TODO %?\n%U\n%a\n")
-				("S" "ShiTong" entry (file+headline ,"~/.org/todo.org" "ShiTong")
-         "* TODO %?\n%U\n%a\n")
-        ("n" "Note" entry (file+headline ,"~/.org/note.org" "Inbox")
-         "* Note %?\n%U\n")))
+      `(("t" "TODO" entry (file+headline ,"~/Dropbox/Org/todo.org" "Inbox")
+         "* TODO :: %?\n%T\n%a\n")
+				("p" "Passwd" entry (file+headline ,"~/Dropbox/Org/passwd.org" "Inbox")
+         "* Passwd :: %?\n%U\n")
+				("N" "Network" entry (file+headline ,"~/Dropbox/Org/network.org" "Inbox")
+         "* Network :: %?\n%U\n")
+        ("n" "Note" entry (file+headline ,"~/Dropbox/Org/note.org" "Inbox")
+         "* Note :: %?\n%U\n")))
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "VERIFY(v)" "|" "DONE(d)")
+        (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
+        (sequence "|" "CANCELED(c)")))
+
+(setq org-log-done 'time)
 
 (require 'org-crypt)
 (org-crypt-use-before-save-magic)
